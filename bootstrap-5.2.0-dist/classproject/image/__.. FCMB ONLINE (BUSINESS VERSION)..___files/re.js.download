@@ -1,0 +1,1 @@
+$(document).ready(function(){$('#exampleModal').reveal($(this).data());});

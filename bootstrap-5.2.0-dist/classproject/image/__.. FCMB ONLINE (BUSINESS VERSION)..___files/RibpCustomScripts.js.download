@@ -1,0 +1,28 @@
+﻿$(document).ready(function(){$("#chkLoginVirtual").change(passwordKeyboard);$(':submit').click(function(){$.blockUI({message:'<b>Processing Your Request, Please Wait ..</b>'});setTimeout($.unblockUI,2000);});});document.attachEvent("onkeydown",my_onkeydown_handler);function my_onkeydown_handler(){switch(event.keyCode){case 116:event.returnValue=false;event.keyCode=0;window.status="You can't refresh this page.............";window.alert("You can't refresh this page.")
+break;}}
+function ajaxErrorHandler(result){alert(result.responseText);}
+var opened=false,vkb=null,text=null;function passwordKeyboard(){opened=!opened;$("#txtPassword").removeAttr("readonly")
+if(opened&&!vkb){$("#txtPassword").attr("readonly","readonly");vkb=new VKeyboard("passKeyboard",keyb_callback,false,false,false,true,"","14px","#000","#F00","#FFF","#FFF","#DDD","#777","#CCC","#FFF","#F77",true,"#CC3300","#FF9966","#CC3300",true,true,0);}
+else
+vkb.Show(opened);text=document.getElementById("txtPassword");text.focus();if(document.attachEvent)
+text.attachEvent("onblur",backFocus);}
+var opened=false,vkb=null,text=null;function passwordKeyboardOld(){document.getElementById("passwordSwitch").innerHTML=(opened?"Virtual keyboard":"Hide keyboard");opened=!opened;if(opened&&!vkb){vkb=new VKeyboard("passKeyboard",keyb_callback,false,false,false,true,"","14px","#000","#F00","#FFF","#FFF","#DDD","#777","#CCC","#FFF","#F77",true,"#CC3300","#FF9966","#CC3300",true,true,0);}
+else
+vkb.Show(opened);text=document.getElementById("txtPassword");text.focus();if(document.attachEvent)
+text.attachEvent("onblur",backFocus);}
+function securityAnswerKeyboard(){document.getElementById("securitySwitch").innerHTML=(opened?"Virtual keyboard":"Hide keyboard");opened=!opened;$("#txtChallengeAnswer1").removeAttr("readonly")
+if(opened&&!vkb){$("#txtChallengeAnswer1").attr("readonly","readonly");vkb=new VKeyboard("securityKeyboard",keyb_callback,false,false,false,true,"","14px","#000","#F00","#FFF","#FFF","#DDD","#777","#CCC","#FFF","#F77",true,"#CC3300","#FF9966","#CC3300",false,true,0);}
+else
+vkb.Show(opened);text=document.getElementById("txtChallengeAnswer1");text.focus();if(document.attachEvent)
+text.attachEvent("onblur",backFocus);}
+function backFocus(){if(opened){var l=text.value.length;setRange(text,l,l);text.focus();}}
+function keyb_callback(ch){var val=text.value;switch(ch){case"BackSpace":var min=(val.charCodeAt(val.length-1)==10)?2:1;text.value=val.substr(0,val.length-min);break;case"Enter":text.value+="\n";break;default:text.value+=ch;}
+document.getElementById("hdfPassword").value=text.value;}
+function setRange(ctrl,start,end){if(ctrl.setSelectionRange)
+{ctrl.setSelectionRange(start,end);}
+else
+{var range;try{range=ctrl.createTextRange();}
+catch(e){try{range=document.body.createTextRange();range.moveToElementText(ctrl);}
+catch(e){range=null;}}
+if(!range)return;range.collapse(true);range.moveStart("character",start);range.moveEnd("character",end-start);range.select();}}
+function disableBackButton(){window.history.forward();setTimeout("disableBackButton()",0);}

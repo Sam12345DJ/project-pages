@@ -1,0 +1,374 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+    crossorigin="anonymous"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+    integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+    crossorigin="anonymous"></script>
+  <title>Bootstrap demo</title>
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <div style="text-align:center;">
+    <h1 style="color: blue;">GUESS MY NUMBER GAME</h1>
+    <h2 class="message" style="font-size: 32px; margin-left: 70px;">start guessing.....</h2>
+    <input class="mynumber" placeholder="guess a number btw 1-20"
+      style="width: 400px; padding: 5px; text-align: center; font-size: 24px;">
+    <h1 class="number" style="left: 70px; position: relative;">The number is ??</h1>
+    <button class="check">Check</button>
+    <button class="" style="display:none;" >Play Again</button>
+    <h1 class="highestscore">Highest Score:0</h1>
+  </div>
+  <script>
+    function greet() {
+      let a = new Date().getHours();
+      if (a > 0 && a < 11) {
+        alert('Good Morning')
+      }
+      else if (a > 11 && a < 16) {
+        alert('Good afternoon')
+      }
+      else {
+        alert('Good Evening')
+      };
+
+    };
+    function seun() {
+      let resturant = {
+        name: 'chicken Republic',
+        categories: ['aficandish', 'chinesedish', 'calarbadish', 'indiadish', 'drink', 'soup', 'meat',],
+        drink: ['chivita', 'chiexotic', 'cocoa', 'fanta', '7up', 'evabottlewater',],
+        soup: ['egusi', 'ewedu', 'stew', 'ogbono', 'okoro',],
+        swallow: ['amala', 'semovita', 'akpu', 'fufu', 'eba',],
+        owner: 'mr okoro',
+        location: 'bodija',
+      };
+      alert(`i want ${resturant.categories[5]} ${resturant.soup[0]} and ${resturant.swallow[4]} i also want ${resturant.drink[3]}, thanks`);
+    };
+    function james() {
+      let age = prompt('what is Nigerian age ?');
+      let d = +age;
+      switch (d) {
+        case 50: alert('not close');
+          break;
+        case 59: alert('close');
+          break;
+        case 60: alert(' almost correct');
+          break;
+        case 63: alert('correct');
+          break;
+        case 64: alert('close');
+          break;
+        case 65: alert('close');
+          break;
+        default: alert('wrong');
+      };
+    };
+    let w, q;
+    function getAnswer() {
+      if (w == " " || q == "") {
+        ci.innerHTML = "insert a number"
+        ci.style.color = "red"
+      }
+      else if (isNaN(q) || isNaN(w)) {
+        ci.innerHTML = " insert a number"
+        ci.style.color = "red"
+      }
+    }
+    let ci = document.getElementById('answer');
+    let p = document.getElementById('symbol');
+
+    let rt = document.querySelectorAll('.but')
+
+    for (let i = 0; i < rt.length; i++) {
+
+      rt[i].addEventListener('click', function () {
+
+        getAnswer()
+        let w = Number(document.getElementById('input1').value);
+        let q = Number(document.getElementById('input2').value);
+        if (rt[i].value == 'add') {
+          let ko = w + q
+          p.innerHTML = "+";
+          ci.innerHTML = ` = ${ko}`
+          ci.style.color = 'green';
+
+        }
+        if (rt[i].value == 'sub') {
+          let ko = w - q
+          p.innerHTML = "-";
+          ci.innerHTML = ` = ${ko}`
+          ci.style.color = 'green';
+
+        }
+        if (rt[i].value == 'divi') {
+          let ko = w / q
+          p.innerHTML = "/";
+          ci.innerHTML = ` = ${ko}`
+          ci.style.color = 'green';
+
+        }
+        if (rt[i].value == 'multi') {
+          let ko = w * q
+          p.innerHTML = "X";
+          ci.innerHTML = ` = ${ko}`
+          ci.style.color = 'green';
+
+        }
+      })
+    };
+
+    function cla() {
+      let moneyInvested = Number(document.getElementById('iron').value);
+      let month = Number(document.getElementById('steel').value);
+      let loan = moneyInvested * 0.1;
+      let calow = moneyInvested + loan * month;
+      document.getElementById('payup').innerHTML = (`${calow}`)
+      document.getElementById('mote').innerHTML = (`${month} month`)
+
+    };
+
+
+    function seyi() {
+      let ser = document.querySelector('#winner')
+      let oneday = new Date().getDay()
+      let days = ['Sunday', 'Monday', "Tuesday", 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+      if (oneday == 0) {
+        ser.innerHTML = (` <h2>Today is ${days[oneday]} go to church </h2>`)
+      }
+      else if (oneday == 5) {
+        ser.innerHTML = (` <h2>Today is ${days[oneday]} go to mosque </h2>`)
+      }
+      else if (oneday == 6) {
+        ser.innerHTML = (` <h2>Today is ${days[oneday]} go to party </h2>`)
+      }
+      else (
+        ser.innerHTML = (` <h2>Today is ${days[oneday]} go to work</h2>`)
+      )
+    }
+    function vibes() {
+      let n;
+      n = prompt('enter a number from 1 to 70');
+      if (!n || n < 1 || n > 70) {
+        alert(`enter a number from 1 to 70`)
+      }
+      else if (n == 2) {
+        alert(`the number is a prime number`)
+      }
+      else {
+        let i;
+        for (i = 2; i < n; i++) {
+          if (n % i == 0) {
+            alert(`you are wrong, ${n} is not a prime number`);
+            break;
+          }
+        }
+        if (n == i) {
+          alert(`this is a prime number`)
+        }
+      }
+    }
+    function opeyemi() {
+      let firstMoney = Number(document.querySelector(`#lon`).value);
+      let MarkUpPercentAge = Number(document.querySelector(`#lom`).value);
+      let MonthsYear = Number(document.querySelector(`#stee`).value);
+      let Percentage = MarkUpPercentAge / 100;
+      let TotalAmount = firstMoney * Percentage + firstMoney;
+      let jk = MonthsYear;
+      let Inter = TotalAmount / MonthsYear;
+      document.querySelector(`#fre`).innerHTML = `${Inter} naria`;
+      document.querySelector(`#frt`).innerHTML = `${jk}`;
+      document.querySelector(`#fry`).innerHTML = `${TotalAmount} naria`;
+    }
+    function cha() {
+      let ampaino = document.querySelector(`#lom`).value;
+      show.innerHTML = `${ampaino}`
+    }
+
+
+    const secretNumber = Math.trunc(Math.random() * 20) + 1;
+    const find = document.querySelector(`.check`);
+
+    let theNumber = document.querySelector('.number');
+    let thebody = document.querySelector(`.na`);
+    let myMessage = document.querySelector(`.message`);
+    let myEngine = function () {
+      let myGues = Number(document.querySelector(`.mynumber`).value);
+      if (!myGues || myGues < 1 || myGues > 20) {
+        myMessage.innerHTML = `you must put a valid number between 1 and 20`;
+        myMessage.style.color = `red`;
+        document.querySelector(`.mynumber`).value = "";
+      }
+      else if (myGues < secretNumber) {
+        myMessage.innerHTML = `your guess is low`;
+        myMessage.style.color = "lightblue";
+        document.querySelector(`.mynumber`).value = "";
+      }
+      else if (myGues > secretNumber) {
+        myMessage.innerHTML = `your guess is too high`;
+        myMessage.style.color = "lightblue";
+        document.querySelector(`.mynumber`).value = "";
+      }
+      else if (myGues == secretNumber) {
+        myMessage.innerHTML = 'correct';
+        myMessage.style.color = 'white';
+        thebody.style.background = `green`;
+        thebody.style.color = `white`;
+        theNumber.innerHTML = `The number is ${secretNumber} Correct`;
+        theNumber.style.color = `white`;
+        document.querySelector(`.mynumber`).value = "";
+      }
+    }
+    console.log(secretNumber)
+    find.addEventListener('click', myEngine)
+    function inputlength() {
+      let field = document.form1.text1.value;
+      letminlength = 6;
+      letmaxlength = 11;
+      if (field.length < 6 || field.length > 11) {
+        document.querySelector('5pm').innerHTML = `please make sure you input is not less than ${minlength} and more than ${maxlength}`;
+        return false;
+      } else {
+        document.querySelector('5pm').innerHTML = 'your input is accepted';
+        return time;
+      }
+    }
+    let text = document.getElementById
+    let myAge = document.querySelector('#age').value;
+    let btn = document.querySelector('button');
+
+    btn.addEventListener('click', function () {
+
+      let myAge = document.querySelector('#age').value;
+
+      if (isNaN(myAge) || !myAge) {
+        document.querySelector('span').innerHTML = 'invalid';
+        document.querySelector('input').style.color = 'red';
+      }
+      else {
+        document.querySelector('span').innerHTML = 'valid ';
+        document.querySelector('span').style.color = 'green';
+      }
+      document.querySelector('span');
+    })
+    let x = 56.58724;
+    alert(x.length)
+    alert(x.toLowerCase());//
+    alert(x.lastIndexOf("nice"));//
+    alert(x.search('nice'))
+    alert(x.slice());
+    let delay ='tunde';
+    alert(x.slice())
+    function oga() {
+    let a = document.querySelector('h1').innerHTML;
+    let b = a.replace('shop', 'office');
+    document.querySelector('h1').innerHTML = b;
+    }
+    alert(x.toFixed('2'));
+    let myoutput = d.getHours();
+     alert(myoutput);
+    let d = new Date();
+    let Month = ['January', 'Febuary', 'March', 'April', 'May', 'June', 'july', 'August','september', 'october', 'december']
+    alert(Month[d.getMonth()]);
+    let y = new Date().getDay();
+    alert(y)
+    setTimeout(func/code,delay,ag1,ag2)
+    greet,2000
+    let greet = function(){
+      alert('HAPPY BIRTHDAY ')
+    }
+    setTimeout();
+    setTimeout(function(){
+      alert('welcome to my birthday party')
+    },2000)
+    setInterval(function(){
+      alert('welcome to my birthday party')
+    },2000)
+    function sayHi(who, phrase){
+      alert(phrase,';'+who)
+    }
+    function printNumber(from, to){
+      let current = from;
+      function go(){
+        alert(current)
+        if(current==to){
+          clearInterval(timeId)
+        }
+        current++
+      }
+      go()
+      let timeId = setInterval(go,1000)
+      }
+    // printNumber(10,20);
+    let countdown = new Date(`July 4 2023 15:07:00`).getTime();
+    function xma(){
+      let now = new Date().getTime();
+      let distance = countdown-now;
+      let days = Math.floor(distance/(24*60*60*1000));
+      let hours = Math.floor(distance%(24*60*60*1000)/(60*60*1000));
+      let minutes = Math.floor(distance%(60*60*1000)/(60*1000));
+      let seconds = Math.floor(distance%(60*1000)/1000);
+      if(distance==0){
+      clearInterval(timeId);
+      document.querySelector(`#countdown`).innerHTML = `HAPPY NEW YEAR`
+    }
+      document.querySelector(`#countdown`).innerHTML= `${days}D:${hours}H: ${minutes}M: ${seconds}S`
+      
+    }
+    xma() 
+    setInterval(xma,1000)
+    
+ let countdown = new Date(`July 3 2023 13:30:00`).getTime();
+ let month = ['January', 'Febuary', 'March', 'April', 'May', 'June', 'july', 'August','september', 'october', 'december']
+ document.querySelector(`#countdown`).innerHTML= `${days}D:${hours}H: ${minutes}M: ${seconds}S`
+let countdown = new Date(`July 3 2023 14:55:00`).getTime();
+function countdown() {
+    let d = new Date()
+    let Months = [`january`, `feburary`, `march`, `april`, `may`, `june`, `july`, `august`, `septmber`, `october`, `november`, `december`];
+    let ho = d.getHours();
+    let mi = d.getMinutes();
+    let sec = d.getSeconds();
+    let da = d.getDate();
+    if (ho < 10) {
+        ho = `0` + ho;
+    }
+    if (da < 10) {
+        da = `0` + da;
+    }
+    if (mi < 10) {
+        mi = `0` + mi;
+    }
+    if (sec < 10) {
+        sec = `0` + sec;
+    }
+    document.querySelector(`#tunde`).innerHTML = `${Months[d.getMonth()]} 
+    ${da}, ${ho} : ${mi} : ${sec}`
+}
+countdown()
+let remi = setInterval(countdown, 1000)
+  </script>
+</body>
+
+</html>

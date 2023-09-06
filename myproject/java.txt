@@ -1,0 +1,710 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>BASIC JAVASCRIPT PROJECT</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: rgb(87, 5, 122);
+            color: rgb(255, 0, 132);
+            text-align: center;
+            padding: 2rem
+        }
+
+        #a1 h2 {
+            font-size: 25px;
+            font-weight: 600
+        }
+
+        #a1 input {
+            height: 5vh;
+            border: 1px solid grey;
+            background: #aaa;
+
+        }
+
+        #a1 button {
+            height: 5vh;
+            width: 10%;
+            border-radius: 5px 0px;
+            background: rgb(171, 124, 167);
+            color: rgb(119, 51, 58);
+            margin-right: 20px;
+        }
+
+        #a1 button:hover {
+            background: rgb(199, 235, 19);
+            color: green;
+        }
+
+        #b2 {
+            transition: 700ms;
+        }
+
+        #b2 h1 {
+            font-size: 20px;
+
+        }
+
+        #b2 h4:hover {
+            transform: scale(1.2);
+            font-size: 30px;
+            font-weight: 700;
+
+        }
+
+        #b2 h4 {
+            color: green;
+            border: 1px solid grey;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            background: #aaa;
+            font-size: 20px;
+        }
+
+        #digi {
+            text-align: center;
+            margin-top: 5rem;
+            transition: 450ms;
+        }
+
+        #digi h4:hover {
+            transform: scale(1.2);
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        #digi h4 {
+            color: rgb(227, 195, 17);
+            border: 1px solid rgba(186, 4, 4, 0.877);
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            font-size: 20px;
+            background: #aaa;
+        }
+
+        #icalc {
+            margin-top: 6rem;
+            margin-bottom: 2rem;
+        }
+
+        #icalc input {
+            height: 2.5rem;
+            border-radius: 1rem;
+            width: 40%;
+            background: #aaa;
+        }
+
+        #icalc select {
+            height: 2.5rem;
+            border-radius: 1rem;
+            color: green;
+            background: yellow;
+        }
+
+        #icalc select:hover {
+            background: rgb(243, 17, 111);
+            color: rgb(208, 240, 25);
+        }
+
+        #icalc button {
+            padding: 8px;
+            color: #e07511;
+            border: none;
+            border-radius: 0 0.5rem;
+        }
+
+        #icalc button:hover {
+            background: green;
+            color: rgb(202, 48, 189);
+            border-radius: 15px;
+        }
+
+        @media screen and (max-width:768px) {
+            #a1 input {
+                text-align: center;
+                width: 100%;
+            }
+
+            #a1 button {
+                margin-bottom: 1.5rem
+            }
+        }
+
+        #loa input{
+    background-color: #aaa;
+    height: 2.5rem;
+    width: 20rem;
+    border-radius: 0.6rem;
+    outline: none;
+}
+
+#loa select{
+    height: 2.5rem;
+    border-radius: 0.6rem;
+    color: green;
+    background-color: rgb(8, 214, 246);
+} 
+
+#loa select:hover{
+    background-color: green;
+    color: yellow;
+}
+
+#loa button{
+    margin-top: 1.5rem;
+    background-color: green;
+    color: yellow;
+    height: 2.5rem;
+    border-radius: 0 0.5rem;
+}
+
+#loa button:hover{
+    background: yellow;
+    color: green;
+}
+
+#loa span{
+    font-size: 1.5rem
+}
+
+#year div{
+    background: #aaa;
+    width: 50%;
+    margin: 0px auto;
+    color: green;
+    padding: 0.6rem;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    outline: 5px dashed pink;
+    border-radius: 1rem ;
+    margin-bottom:3rem;
+}
+
+#year div:hover{
+    transform: scale(1.3);
+    font-size: 1.5rem;
+    font-weight: bold
+}
+
+#watch .sss{
+    font-size: 1.8rem;
+}
+
+#watch button{
+    height: 1.5em;
+    width: 4rem;
+    margin: 0.4rem;
+    border-radius: 1rem 0 
+}
+
+#watch button:hover{
+    border-radius: 0 1rem; 
+}
+
+#gue h3{
+    margin-left: -12rem;
+    margin-top: 1rem;
+}
+
+#gue input{
+    height: 2.5rem;
+    background-color: #aaa;
+    width: 50%;
+    border-radius: 0.5rem;
+}
+
+#gue button{
+    height: 2.4rem;
+    border-radius: 0 0.5rem;
+    margin-left: 1rem; 
+    background-color: rgb(184, 184, 41);
+    color: green;
+}
+
+#gue button:hover{
+    color: yellow;
+    background-color: green;
+}
+
+#timer span{
+    font-size: 2rem;
+}
+
+#timer button{
+    color: yellow;
+    background-color: green;
+    width: 5rem;
+    border: none;
+}
+
+#timer button:hover{
+    color: green;
+    background-color: rgb(121, 202, 131);
+}
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2 style="color: white;"> JAVASCRIPT PROJECT</h2>
+    </div>
+    <br />
+    <div class="container">
+        <div class="row">
+            <!--SIMPLE CALCULATOR-->
+            <br>
+            <br>
+            <br>
+            <div  id="a1">
+                <h2>SIMPLE CALCULATOR</h2>
+                <input type="text" id="input1" placeholder="input number"> &nbsp; <span style="color: white;"
+                    id="span1"></span>
+                <input type="text" id="input2" placeholder="input number"> &nbsp; <span style="color: white;"
+                    id="span2"></span>
+                <br />
+                <br />
+                <button type="button" onclick="one()">+</button>
+                <button type="button" onclick="two()">-</button>
+                <button type="button" onclick="three()">*</button>
+                <button type="button" onclick="four()">/</button>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+
+
+            <!--Buhari countdown -->
+            <div id="b2">
+                <h1><b>BUHARI TENURE WILL BE OVER IN THE NEXT:</b></h1>
+                <h4>
+                    <span id="awo"></span>
+                    <span id="lin"></span>
+                    <span id="dig"></span>
+                    <span id="azu"></span>
+                </h4>
+            </div>
+
+            <!--Digital Clock-->
+            <div id="digi">
+                <h2>DIGITAL CLOCK</h2>
+                <h4 id="clock"></h4>
+            </div>
+
+            <!--INVESTMENT CALCULATOR-->
+            <div id="icalc">
+                <h2>INVESTMENT CALCULATOR</h2>
+                <input type="text" id="input" placeholder="Amount">
+                <select id="select">
+                    <option>In Month</option>
+                    <option value="1">1 Month</option>
+                    <option value="2">2 Month</option>
+                    <option value="3">3 Month</option>
+                    <option value="6">6 Month</option>
+                    <option value="12">12 Month</option>
+                </select> <br /><br />
+                <button onclick="msg()" type="button">CALCULATE</button>
+                <h4 style="color: white;" id="ans"></h4>
+            </div>
+
+            <!--LOAN CALCULATOR-->
+            <div id="loa">
+                <h3>LOAN CALCULATOR</h3>
+                <input type="text" id="grab2" placeholder="Enter Loan Amount?">
+                <select id="select2">
+                    <option>In Month</option>
+                    <option value="1">1 Month</option>
+                    <option value="2">2 Month</option>
+                    <option value="3">3 Month</option>
+                    <option value="6">6 Month</option>
+                    <option value="12">12 Month</option>
+                </select><br />
+                <button onclick="loan()">Calculate</button><br />
+                <span style="color: white;" id="emp1"></span><br />
+                <span style="color: white;" id="emp2"></span><br />
+                <span style="color: white;" id="emp3"></span>
+            </div>
+
+            <!-- PRAYER TIME FOR MUSLIMS-->
+            <div>
+                <h3>PRAYER TIME FOR MUSLIMS</h3>
+                <h5 style="color: white;" id="mus">angel</h5>
+            </div>
+
+            <!--countdown to new year -->
+            <div id="year">
+                <h3>NEW YEAR COUNTDOWN</h3>
+                <br />
+                <div>
+                    <span id="spa"></span>
+                    <span id="spe"></span>
+                    <span id="spi"></span>
+                    <span id="spo"></span>
+                </div>
+            </div>
+
+            <!-- Working Day -->
+
+            <div >
+                <h3>DAYS OF THE WEEK</h3>
+                <h5 style="color: white;" id="dad">00</h5>
+            </div>
+
+            <!--Stop watch-->
+            <div id="watch">
+                <h3>STOP WATCH</h3>
+                <div class="sss">
+                    <span id="hour">00 HRS</span>
+                    <span>: </span>
+                    <span id="min">00 SEC</span>
+                    <span>: </span>
+                    <span id="sec">00 MIN</span>
+                </div>
+                <br />
+                <button style="background-color: rgb(46, 13, 177);" onclick="Start()">Start</button>
+                <button style="background-color: rgb(215, 21, 170);" onclick="stp()">Stop</button>
+                <button style="background-color: rgb(255, 179, 0);" onclick="Clear()">Clear</button>
+            </div>
+
+            <!--Jamb countdown -->
+            <div  id="timer">
+                <h3>TIMER</h3>
+                <span id="mn">00 MIN</span>
+                <span> : </span>
+                <span id="sc">00 SEC</span>
+                <br />
+                <button onclick="slt()">Start</button>
+            </div>
+
+            <!--nigeria age -->
+            <div id="gue">
+                <h3>Guess: </h3>
+                <input type="text" id="grab3" placeholder="How Old Is Nigeria?">
+                <button onclick="nig()">Check</button><a href="index.html" style="text-decoration: none;"> Go Home</a>
+                <br>
+                <span id="ega"></span>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--javascript-->
+    <script>
+        var audio = new Audio(
+            "img/Wiz_Khalifa_-See_You_Again_Audio_lekkiloaded.com.mp3"
+        );
+        //LOAN CALCULATOR
+        function loan() {
+            var la = Number(document.getElementById("grab2").value);
+            var lb = Number(document.getElementById("select2").value);
+            var vc = la * 0.02;
+            var vd = la + vc;
+            var zx = vd / lb;
+            var dab = document.getElementById("emp1").innerHTML =
+                "Your Interest Is: " + "&#8358;" + vc;
+            var bad = document.getElementById("emp2").innerHTML =
+                "Your Monthly Repayment Is:   " + "&#8358;" + zx;
+            var jab = document.getElementById("emp3").innerHTML =
+                "Total Repayment Is  " + "&#8358;" + vd;
+        }
+
+        // SIMPLE calculator
+        function one() {
+            var a = Number(document.getElementById("input1").value);
+            var b = Number(document.getElementById("input2").value);
+            var c = a + b;
+            if (isNaN(c)) {
+                document.getElementById("input2").innerHTML = "=" + "invalid number";
+            }
+            else {
+                document.getElementById("span1").innerHTML = " +";
+                document.getElementById("span2").innerHTML = "= " + c;
+            }
+        }
+
+        function two() {
+            var a = Number(document.getElementById("input1").value);
+            var b = Number(document.getElementById("input2").value);
+            var c = a - b;
+            if (isNaN(c)) {
+                document.getElementById("input2").innerHTML = "=" + "invalid number";
+            }
+            else {
+                document.getElementById("span1").innerHTML = "-";
+                document.getElementById("span2").innerHTML = "= " + c;
+            }
+        }
+
+        function three() {
+            var a = Number(document.getElementById("input1").value);
+            var b = Number(document.getElementById("input2").value);
+            var c = a * b;
+            if (isNaN(c)) {
+                document.getElementById("input2").innerHTML = "=" + "invalid number";
+            }
+            else {
+                document.getElementById("span1").innerHTML = "x";
+                document.getElementById("span2").innerHTML = "= " + c;
+            }
+        }
+
+        function four() {
+            var a = Number(document.getElementById("input1").value);
+            var b = Number(document.getElementById("input2").value);
+            var c = a / b;
+            if (isNaN(c)) {
+                document.getElementById("input2").innerHTML = "=" + "invalid number";
+            }
+            else {
+                document.getElementById("span1").innerHTML = "/";
+                document.getElementById("span2").innerHTML = "= " + c;
+            }
+        }
+
+        // COUNTDOWN BUHARI TENURE!!!
+        var countDownDate = new Date("May 29, 2023 12:00:00").getTime();
+        function richard(q) {
+            var kola = q + "";
+            if (kola.length < 2) {
+                return "0" + kola;
+            }
+
+            else {
+                return kola;
+            }
+        }
+        var x = setInterval(() => {
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            document.getElementById("awo").innerHTML = richard(days) + "" + "D " + ":";
+            document.getElementById("lin").innerHTML = richard(hours) + "" + "H " + ":";
+            document.getElementById("dig").innerHTML = richard(minutes) + "" + "M " + ":";
+            document.getElementById("azu").innerHTML = richard(seconds) + "" + "S ";
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "IT'S OVER IN ASO ROCK";
+            }
+        }, 1000);
+
+        // DIGITAL CLOCK
+        function olu(hh) {
+            var kola = hh + "";
+            if (kola.length < 2) {
+                return "0" + kola;
+            }
+
+            else {
+                return kola;
+            }
+        }
+
+        function current() {
+            let date = new Date();
+            let hh = new Date().getHours();
+            let mm = new Date().getMinutes();
+            let ss = new Date().getSeconds();
+            let session = "AM";
+            hh = (hh < 10) ? "0" + hh : hh;
+            mm = (mm < 10) ? "0" + mm : mm;
+            ss = (ss < 10) ? "0" + ss : ss;
+            if (hh == 0) {
+                hh = 12;
+
+            }
+            if (hh > 12) {
+                hh = hh - 12;
+                session = "pm";
+            }
+
+            document.getElementById("clock").innerHTML = olu(hh) + " : " + mm + " : " + ss + " " + session;
+            let t = setTimeout(current, 1000);
+        }
+        current();
+
+        //INVESTMENT CALCULATOR
+        function msg() {
+            var a = Number(document.getElementById("input").value);
+            var b = Number(document.getElementById("select").value);
+            var c = a * 0.1 * b;
+            var d = c + a;
+            document.getElementById("ans").innerHTML = "Withdrawal Amount will be:" + " " + "&#8358;" + d;
+        }
+
+        // Muslim prayer time
+        var tim = document.getElementById("mus");
+        var mit = new Date().getHours();
+        switch (mit) {
+            case 5:
+                tim.innerHTML = "its Fajr time my fellow muslims brother and sister";
+                break;
+            case 6:
+                tim.innerHTML = "its Sunrise, my fellow muslims brother and sister";
+                break;
+            case 14:
+                tim.innerHTML = "its Dhuhr, my fellow muslims brother and sister";
+                break;
+            case 16:
+                tim.innerHTML = "its Asr, my fellow muslims brother and sister";
+                break;
+            case 19:
+                tim.innerHTML = "its Maghrib, my fellow muslims brother and sister";
+                break;
+            case 20:
+                tim.innerHTML = "its Isha, my fellow muslims brother and sister";
+                break;
+            default:
+                tim.innerHTML = "its not time for prayer";
+                break;
+        }
+
+        //countdown to new year
+        const all = setInterval(() => {
+            const to = new Date("Jan 01, 2023 12:00:00").getTime();
+            const nw = new Date().getTime();
+            const dif = to - nw;
+            const dy = Math.floor(dif / (1000 * 60 * 60 * 24));
+            const hr = Math.floor((dif % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const ms = Math.floor((dif % (1000 * 60 * 60)) / (1000 * 60));
+            const su = Math.floor((dif % (1000 * 60)) / 1000);
+            document.getElementById("spa").innerHTML = richard(dy) + "" + "D :";
+            document.getElementById("spe").innerHTML = richard(hr) + "" + "H :";
+            document.getElementById("spi").innerHTML = richard(ms) + "" + "M :";
+            document.getElementById("spo").innerHTML = richard(su) + "" + "S";
+            if (dif <= 0) {
+                clearInterval(all);
+                document.getElementById("year").innerHTML = "HAPPY NEW YEAR";
+                audio.play();
+            }
+        }, 1000);
+
+        // Working Day
+        let bob = new Date().getDay();
+        switch (bob) {
+            case 1:
+                document.getElementById("dad").innerHTML =
+                    "Today is Monday, let`s get to work";
+                break;
+            case 2:
+                document.getElementById("dad").innerHTML =
+                    "Today is Tuesday, let`s get to work";
+                break;
+            case 3:
+                document.getElementById("dad").innerHTML =
+                    "Today is Wednesday, let`s get to work";
+                break;
+            case 4:
+                document.getElementById("dad").innerHTML =
+                    "Today is Thursday, let`s get to work";
+                break;
+            case 5:
+                document.getElementById("dad").innerHTML = "Thanks God it`s friday, lets go and party";
+                break;
+            default:
+                document.getElementById("dad").innerHTML = "Happy Weekend!!!";
+        }
+
+        // STOP WATCH
+        var aa = 0;
+        var dd = document.getElementById("hour");
+        var cc = document.getElementById("min");
+        var bb = document.getElementById("sec");
+        function setTime() {
+            aa++;
+            dd.innerHTML = richard(parseInt(aa / 3600)) + "" + " HRS";
+            cc.innerHTML = richard(parseInt((aa % 3600) / 60)) + "" + " MINS";
+            bb.innerHTML = richard(aa % 60) + "" + " SECS";
+        }
+        function Start() {
+            document.getElementById("hour").style.color = "white";
+            document.getElementById("min").style.color = "white";
+            document.getElementById("sec").style.color = "white";
+            x = setInterval(setTime, 1000);
+            audio.play();
+        }
+        function stp() {
+            clearInterval(x);
+            audio.pause();
+        }
+        function Clear() {
+            document.getElementById("hour").innerHTML = "00" + " HRS";
+            document.getElementById("min").innerHTML = "00" + " MINS";
+            document.getElementById("sec").innerHTML = "00" + " SECS";
+        }
+
+        // JAMB COUNTDOWN
+        var ax = 0;
+        const yum = 1;
+        var cx = document.getElementById("mn");
+        var bx = document.getElementById("sc");
+        function lab() {
+            ax++;
+            bx.innerHTML = richard(ax % 60) + "" + " SECS";
+            cx.innerHTML = richard(parseInt(ax / 60)) + "" + " MINS";
+            if (cx === yum) {
+                clearInterval(lab);
+            }
+        }
+        function slt() {
+            bx.style.color = "white";
+            cx.style.color = "white";
+            y = setInterval(lab, 1000);
+        }
+
+        //Nigeria Age
+        function nig() {
+            var ig = document.getElementById("grab3").value;
+            // alert(ig)
+            switch (ig) {
+                case "":
+                    document.getElementById("ega").innerHTML = " Invalid Input"
+                    break;
+                case "62":
+                    document.getElementById("ega").innerHTML = "Correct!!!";
+                    document.getElementById("ega").style.color = "green"
+                    break;
+                case "60":
+                    document.getElementById("ega").innerHTML = "You almost there";
+                    break;
+                case "55":
+                    document.getElementById("ega").innerHTML = "You tried";
+                    break;
+                case "50":
+                    document.getElementById("ega").innerHTML = "Try again";
+                    break;
+                case "45":
+                    document.getElementById("ega").innerHTML = "No, Don`t Give Up";
+                    break;
+                default:
+                    document.getElementById("ega").innerHTML = "Oops!!! You are Wrong";
+            }
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

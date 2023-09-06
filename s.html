@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+
+<body>
+  <div id="olu">
+    <h1 style="margin:5px">Add subject</h1>
+
+    <input type="text" id="tola" placeholder="subjects..." style=" padding:3px 5px; font-size:24px">
+
+    <button onclick="tunji()" style="cursor:pointer; padding:3px 5px; background:red; font-size:24px">+ add</button>
+
+  </div>
+
+  <ol id="subject" style="font-size:36px">
+
+  </ol>
+  <form name="form1" action="#" onSubmit="myfunction(document.form1.text1)">
+
+    <input type='text' name='text1' onkeyup="
+      myfunction(document.form1.text1)" />
+
+    <span id="tolu"></span>
+    <br><br>
+
+    <input type="submit" name="submit" value="Submit" />
+
+  </form>
+
+
+  <script>
+    {
+
+      var a = /^[-+]?[0-9]+$/;
+      if (inputtxt.value.match(a)) {
+        document.getElementById("tolu").innerHTML = "<span style='color:green; font-size:30px'> Ok</span>";
+
+        document.form1.text1.focus();
+        return true;
+      }
+      else {
+        document.getElementById("tolu").innerHTML = "<span style='color:red; font-size:30px'>invalid input. please put a valid number</span>";
+        document.form1.text1.focus();
+        return false;
+      }
+    }
+    <input type="form1" action="#" onSubmit="myfunction(document.form1.text1)">
+
+      <input type='text' name='text1' onkeyup="
+      myfunction(document.form1.text1)"/>
+
+      <span id="tolu"></span>
+      <br><br>
+
+        <input type="submit" name="submit" value="Submit" />
+
+      </form>
+
+
+
+        <script>
+
+          function myfunction(inputtxt)
+          {
+          
+          var a = /^[-+]?[0-9]+$/;
+          if(inputtxt.value.match(a))
+          {
+            document.getElementById("tolu").innerHTML = "<span style='color:green; font-size:30px'> Ok</span>";
+
+          document.form1.text1.focus();
+          return true;
+          }
+          else
+          {
+            document.getElementById("tolu").innerHTML = "<span style='color:red; font-size:30px'>invalid input. please put a valid number</span>";
+          document.form1.text1.focus();
+          return false;
+          }
+        }
+
+          let tunji= function(){
+            let a =document.getElementById('olu');
+          let b =document.getElementById('tola').value;
+          let c =document.getElementById('subject');
+
+          let d = document.createElement('li');
+          let e = document.createTextNode(b);
+          d.appendChild(e);
+          c.appendChild(d);
+          document.getElementById('tola').value='';
+
+
+          let x = document.createElement('span');
+          let y = document.createTextNode('\u00d7');
+          x.appendChild(y);
+          x.style.background…
+          [21:45, 12/8/2022] Dad: <div id="olu" >
+            <h1 style="margin:5px">Add subject</h1>
+
+            <input type="text" id="tola" placeholder="subjects..." style=" padding:3px 5px; font-size:24px">
+
+              <button onclick="tunji()" style="cursor:pointer; padding:3px 5px; background:red; font-size:24px">+ add</button>
+
+          </div>
+
+          <ol id="subject" style="font-size:36px">
+
+          </ol>
+
+          <script>
+
+            let tunji= function(){
+              let a =document.getElementById('olu');
+            let b =document.getElementById('tola').value;
+            let c =document.getElementById('subject');
+
+            let d = document.createElement('li');
+            let e = document.createTextNode(b);
+            d.appendChild(e);
+            c.appendChild(d);
+            document.getElementById('tola').value='';
+
+
+            let x = document.createElement('span');
+            let y = document.createTextNode('\u00d7');
+            x.appendChild(y);
+            x.style.backgroundColor="red";
+            x.style.color="white";
+            x.style.cursor="pointer";
+            x.className='close';
+
+            d.appendChild(x);
+
+            let f = document.getElementsByClassName('close');
+            let i;
+            for(i=0; i<f.length; i++){
+              f[i].onclick = function () {
+                this.parentNode.style.textDecoration = "line-through"
+              }
+
+            }
+  }
+
+            document.addEventListener('keydown', function(e){
+    if(e.key==="Enter"){
+              tunji();
+    };
+  });
+
+
+
+            <script>
+
+              function myfunction(inputtxt)
+            </body>
+          </html>

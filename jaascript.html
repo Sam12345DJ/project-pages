@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+
+<body>
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+  </head>
+
+  <body>
+
+
+
+    <div id="olu">
+      <h1 style="margin:5px">Add</h1>
+
+      <input type="text" id="tola" placeholder="subjects..." style=" padding:3px 5px; font-size:24px">
+
+      <button onclick="tunji()" style="cursor:pointer; padding:3px 5px; background:red; font-size:24px">+ add</button>
+
+    </div>
+
+    <ol id="subject" style="font-size:36px">
+
+    </ol>
+    <span title='markdone' class="done"></span>
+    <script>
+function sam(){
+  let d = document
+}
+      let tunji = function () {
+        let a = document.getElementById('olu');
+        let b = document.getElementById('tola').value;
+        let c = document.getElementById('subject');
+
+        let d = document.createElement('li');
+        let e = document.createTextNode(b);
+        d.appendChild(e);
+        c.appendChild(d);
+        document.getElementById('tola').value = '';
+
+
+        let x = document.createElement('span');
+        let y = document.createTextNode('\u2714');
+        x.appendChild(y);
+        x.title = "markdone"
+        x.style.backgroundColor = "green";
+        x.style.color = "white";
+        x.style.cursor = "pointer";
+        x.className = 'close';
+
+        d.appendChild(x);
+        let f = document.getElementsByClassName('close');
+        let i;
+        for (i = 0; i < f.length; i++) {
+          f[i].onclick = function () {
+            this.parentNode.style.textDecoration='line-through';
+          }
+
+        }
+      }
+      let g = document.createElement('span');
+        let t = document.createTextNode('\u00d7');
+        g.appendChild(t);
+        g.title = "delete";
+        g.style.backgroundColor = "red";
+        g.style.color = "white";
+        g.style.cursor = "pointer";
+        g.className = 'delete';
+
+        d.appendChild(g);
+        let l = document.getElementsByClassName('delete');
+        let m;
+        for (m = 0; m < l.length; m++) {
+          l[m].onclick = function () {
+            this.parentNode.style.display='none';
+          }
+
+        }
+      
+      document.addEventListener('keydown', function (e) {
+        if (e.key === "Enter") {
+          tunji();
+        }
+      })
+
+
+    </script>
+
+  </body>
+
+  </html>

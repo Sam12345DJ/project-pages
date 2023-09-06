@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+    crossorigin="anonymous"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+    integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <form id="dred">
+    <label>NAME</label>
+    <input type='username' id="sam"></input><br><br>
+    <span id='usererror'></span>
+    <label>Email</label> 
+    <input type='Email' id="bee"></input><br><br>
+    <span id="emailerror"></span>
+    <label>password</label>
+    <input type='password' id="see"></input><br><br>
+    <span id="passerror"></span>
+    <label>confirmpassword</label>
+    <input type='confirmpass' id="free"></input><br><br>
+    <span id="confirmerror"></span>
+    <button style="border-radius: 30px;" >submit</button>
+  </form>
+  </div>
+    
+</body>
+<script>
+  let form = document.getElementById('dred');
+   let myusername = document.getElementById('sam');
+   let myemail = document.getElementById('bee');
+   let mypassword = document.getElementById('see');
+   let confirmpass = document.getElementById('free');
+   let usererror = document.getElementById('usererror');
+   let emailerror = document.getElementById('emailerror');
+   let passerror = document.getElementById('passerror');
+   let confirmerror = document.getElementById('confirmerror');
+
+   const emailformat = /^\w+@[a-z]+\.[a-z]{2,3}$/
+   const passwordformat = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&])[a-zA-Z0-9!@#\$%\^&]{5,15}$/
+form.addEventListener("submit",function(dred){
+dred.preventdefault();
+let dred = true;
+if(!myusername.value){
+  usererror.textcontent="input username";
+  usererror.style,color ="red";
+}else{
+  usererror.textcontent="username correct";
+  usererror.style.color="blue";
+}
+if(!mypassword.value){
+  password.textcontent="input password";
+ password .style,color ="red";
+}else{
+  passerror.textcontent="username correct";
+ passerror.style.color="blue";
+}
+if(!myemail.value){
+  email.textcontent="input username";
+  email.style,color ="red";
+}else{
+  emailerror.textcontent="username correct";
+  emailerror.style.color="blue";
+}
+
+})
+dred.addEventListener('submit',function(samuel)
+{
+samuel.preventdefault();
+dred 
+})
+</script>
+</html>

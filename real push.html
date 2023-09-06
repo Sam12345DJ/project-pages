@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        
+    </title>
+    <body>
+        <div class="nigeria">
+            <h1>Simple Add and Delete
+              Machine</h1>
+            <div>
+              <input type="text" id="input">
+              <button onclick="taiwo()">
+                Add</button>
+              <ul id="myown">
+  
+              </ul>
+            </div> 
+        </div>
+        <div class="container gu">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="shadow" id="guess">
+                        <h3>
+                            GUESS MY NUMBER GAME</h3>
+                        <div class="body">
+                            <div class="top">
+                                <h2></h2>
+                                <h3 class="nah">
+                                    Start Guessing......
+                                </h3> <br>
+                                <input class="mynumber" placeholder="guess my number between 1 and 20"><br><br><br>
+    
+                                <h2 class="number">
+                                    The number is
+                                    ??</h2><br>
+    
+                                <button class="check">Check</button>
+    
+                                <button class="again">PLAY AGAIN</button>
+    
+                                <h1 class="highestscore">
+                                    Highest Score: <span id="high">0</span></h1>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+    
+    
+    
+    </body>
+    <script>
+         // Countdown
+
+
+                // Guess my number game
+                let highestscore = document.querySelector('#high').innerHTML;
+                const btn = document.querySelector('.check');
+                btnagain = document.querySelector('.again');
+                let myMessage = document.querySelector('.nah')
+                let theNumber = document.querySelector('.number');
+                let theBody = document.querySelector('.body');
+                secretNumber = Math.trunc(Math.random() * 20) + 1;
+                let score = 20;
+
+                function scoreline() {
+                    score = score - 4;
+                    if (score == 0) {
+                        myMessage.innerHTML = 'Game Over';
+                        btn.style.display = 'none';
+                        btnagain.style.display = 'inline-block';
+                        btn.style.backgroundColor = 'red'
+                        btn.style.color = 'white';
+                        document.querySelector('.mynumber').value = "";
+                        theBody.style.backgroundColor = 'red'
+                        theNumber.innerHTML = `The Number is ${secretNumber}`;
+                    }
+                }
+
+                let myEngine = function () {
+                    let myGuess = Number(document.querySelector('.mynumber').value);
+                    if (!myGuess || myGuess < 1 || myGuess > 20) {
+                        myMessage.innerHTML = 'your guess must be between 1 and 20 only';
+                        myMessage.style.color = "gold";
+
+                        document.querySelector('.mynumber').value = "";
+                        scoreline();
+                    } else if (myGuess > secretNumber) {
+                        myMessage.innerHTML = 'your guess is too high';
+                        myMessage.style.color = "red";
+                        document.querySelector('.mynumber').value = "";
+                        scoreline();
+                    } else if (myGuess < secretNumber) {
+                        myMessage.innerHTML = 'your guess is too low';
+                        myMessage.style.color = "blue";
+                        document.querySelector('.mynumber').value = "";
+                        scoreline();
+                    } else if (myGuess == secretNumber) {
+                        myMessage.innerHTML = `correct, the number is ${secretNumber}`;
+                        myMessage.style.color = "yellow";
+                        theBody.style.backgroundColor = "green";
+                        theBody.style.color = "white";
+                        theNumber.innerHTML = `SCORE: ${score}`;
+                        theNumber.style.color = 'yellow';
+                        document.querySelector('.mynumber').value = "";
+                        btn.style.display = 'none'
+                        btnagain.style.display = 'inline-block';
+                        document.querySelector('.mynumber').value = '';
+                        if (highestscore < score) {
+                            document.querySelector('#high').innerHTML = score;
+                        }
+                    }
+                }
+
+                console.log(secretNumber)
+                btn.addEventListener('click', myEngine);
+                btnagain.addEventListener('click', function () {
+                    myMessage.innerHTML = 'Start guessing......';
+                    myMessage.style.color = 'black';
+                    btn.style.display = "inline-block"
+                    btnagain.style.display = "none"
+                    btn.style.backgroundColor = "white"
+                    btn.style.color = "black"
+                    document.querySelector('.mynumber').value = '';
+                    theBody.style.backgroundColor = 'white';
+                    theNumber.innerHTML = `The number is ??`;
+                    score = 20;
+                    secretNumber = Math.trunc(Math.random() * 20) + 1;
+                    theNumber.style.color = 'black';
+                })        
+
+    </script>
+</head>

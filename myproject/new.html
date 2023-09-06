@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial scale =" 1.0">
+</head>
+
+<body>
+    <div class="calculator">
+        <h1>SIMPLE CALCULATOR</h1>
+
+        <input placeholder="input a number" id="input1" value="">
+
+        <span id="symbol"></span>
+
+        <input placeholder="input a number" id="input2">
+
+        <span id="answer"></span> <br> <br> <br>
+
+
+        <button class="ty1">+</button>
+        <button class="ty2">-</button>
+        <button class="ty3">/</button>
+        <button class="ty4">X</button>
+    </div>
+
+    <script>
+
+        let a, b, c, d, k;
+
+        function getAnswer() {
+            if (a == "" || b == "") {
+                c.innerHTML = "please kindly fill those empty spaces"
+                c.style.color = "red";
+            }
+            else if (isNaN(a) || isNaN(b)) {
+                c.innerHTML = "only number is allowed."
+                c.style.color = "red";
+            }
+
+            else {
+                c.innerHTML = `=  ${k}`;
+                c.style.color = "green";
+            }
+
+        }
+
+        let ade = function () {
+            a = Number(document.getElementById('input1').value);
+            b = Number(document.getElementById('input2').value);
+            c = document.getElementById('answer');
+            d = document.getElementById('symbol');
+            k = a + b;
+            d.innerHTML = '+';
+            getAnswer();
+        };
+
+        const sub = function () {
+            k = a - b;
+            d.innerHTML = '-';
+            getAnswer();
+        }
+
+        const divi = function () {
+            k = a / b;
+            d.innerHTML = '/';
+            getAnswer();
+        }
+
+        const muti = function () {
+            k = a * b;
+            d.innerHTML = '*';
+            getAnswer();
+        }
+
+        let btn1 = document.querySelector('.ty1');
+        let btn2 = document.querySelector('.ty2');
+        let btn3 = document.querySelector('.ty3');
+        let btn4 = document.querySelector('.ty4');
+
+        btn1.addEventListener('click', ade);
+        btn2.addEventListener('click', sub);
+        btn3.addEventListener('click', divi);
+        btn4.addEventListener('click', muti);
+
+
+
+        for (let i = 0; i < 21; i++) {
+            console.log(i += 2)
+            alert(i)
+        }
+    </script>
+<script>
+
+</script>
+</body>
+
+</html>
