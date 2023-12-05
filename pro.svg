@@ -5,6 +5,9 @@
     <stop offset=".0006" stop-color="#0867df"/>
     <stop offset=".4539" stop-color="#0668e1"/>
     <stop offset=".8591" stop-color="#0064e0"/>
+    <script>
+    let
+</script>
   </linearGradient>
   <linearGradient id="b" gradientUnits="userSpaceOnUse" x1="476.93" x2="569.3698" y1="490.2073" y2="420.0277">
     <stop offset=".1323" stop-color="#0064df"/>

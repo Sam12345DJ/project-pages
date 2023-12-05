@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="swift.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@100&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="song">
+    <a href="#" style="color: grey;"><i class="fa fa-angle-up"></i></a>
+  </div>
+  <nav id="navbar-example2" class="navbar  px-3 mb-3"
+    style="position: sticky; top: 0px; background: rgb(15, 15, 37); font-size: 12px;">
+    <h1 style="color: white;">JAVA SCRIPT WORK<span class="jk"> </span></h1>
+
+  </nav>
+  <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-smooth-scroll="true"
+    class="scrollspy-example p-3 rounded-2" tabindex="0"></div>
+  <p>
+  <div class="all">
+    <div class="calculator">
+      <h1>SIMPLE CALCULATOR</h1>
+      <input placeholder="input a number" id="input1"><span id="symbol"></span>
+      <input placeholder="input a number" id="input2"> <span id="answer"></span> <br> <br> <br>
+      <button class="but" value="add">+</button>
+      <button class="but" value="sub">-</button>
+      <button class="but" value="divi">/</button> <br> <br> <br>
+      <button class="but" value="multi">X</button>
+    </div> <br>
+    </p>
+    <div class="nigeria">
+      <h1>GUESS THE NIGERIAN AGE GAME</h1>
+      <h4>(using Switch) </h4>
+      <button onclick="james()">Start Game</button>
+    </div>
+  </div>
+  </p>
+  </div>
+  <h2 class="rex">The history of JAVA SCRIPT FROM ES1-ES6</h2>
+  <p>
+    JavaScript was invented by Brendan Eich in 1995.
+
+    It was developed for Netscape 2, and became the ECMA-262 standard in 1997.
+
+    After Netscape handed JavaScript over to ECMA, the Mozilla foundation continued to develop JavaScript for the
+    Firefox browser. Mozilla's latest version was 1.8.5. (Identical to ES5).
+
+    Internet Explorer (IE4) was the first browser to support ECMA-262 Edition 1 (ES1).
+
+    Year ECMA Browser
+    1995 JavaScript was invented by Brendan Eich
+    1996 Netscape 2 was released with JavaScript 1.0
+    1997 JavaScript became an ECMA standard (ECMA-262)
+    1997 ES1 ECMAScript 1 was released
+    1997 ES1 IE 4 was the first browser to support ES1
+    1998 ES2 ECMAScript 2 was released
+    1998 Netscape 42 was released with JavaScript 1.3
+    1999 ES2 IE 5 was the first browser to support ES2
+    1999 ES3 ECMAScript 3 was released<br>
+    2000 ES3 IE 5.5 was the first browser to support ES3
+    2000 Netscape 62 was released with JavaScript 1.5
+    2000 Firefox 1 was released with JavaScript 1.5
+    2008 ES4 ECMAScript 4 was abandoned
+    2009 ES5 ECMAScript 5 was released<br>
+    2011 ES5 IE 9 was the first browser to support ES5 *
+    2011 ES5 Firefox 4 was released with JavaScript 1.8.5
+    2012 ES5 Full support for ES5 in Safari 6
+    2012 ES5 Full support for ES5 in IE 10
+    2012 ES5 Full support for ES5 in Chrome 23
+    2013 ES5 Full support for ES5 in Firefox 21
+    2013 ES5 Full support for ES5 in Opera 15<br>
+    2014 ES5 Full support for ES5 in all browsers
+    2015 ES6 ECMAScript 6 was released<br>
+    2016 ES6 Full support for ES6 in Chrome 51
+    2016 ES6 Full support for ES6 in Opera 38
+    2016 ES6 Full support for ES6 in Safari 10
+    2017 ES6 Full support for ES6 in Firefox 54
+    2017 ES6 Full support for ES6 in Edge 15<br>
+    2018 ES6 Full support for ES6 in all browsers **</p>
+  <h2>Difference between "var", "let", and "const"</h2>
+  <p>The main difference between is in their scope and assignability. Variables declared with "var" have the
+    function-level scope and can be reassigned
+    and redeclared, while similarity:"let" and "const" variables have the block-level scope, "let" variables can be
+    updated but not
+    re-declared, but "const" variables can neither be updated nor re-declared.
+    Variables declared with const , just like let , are hoisted to the top of their global, local, or block scope –
+    without a default initialization.
+    var variables, are hoisted with a default value of undefined so they can be accessed before declaration without
+    errors. similarity:
+    var and let create variables that can be reassigned another value. const creates "constant" variables that cannot be
+    reassigned another value var declarations are globally scoped or function scoped while similarity let and cons
+    t are block scoped. While var and let can be declared without being initialized, const must be initialized during
+    declaration.</p>
+  <h2>Different between Java and JavaScript</h2>
+  <p>Java is a Programming language
+    Java is a pure Object Oriented Programming Language
+    Java is a Standalone language
+    Java programming language was developed by the " Sun Microsystems"
+    Java programming language, programs are saved with the ".java" extension
+    Java requires a large amount of memory
+    Java is stored on the host machine as the "Byte" code
+
+    JavaScript is a scripting language.
+    JavaScript is Object-Based Language.
+    JavaScript is not a standalone language, as it needs to be integrated into an "HTML program for execution".
+    JavaScript programming language was developed by the "Netscape."
+    JavaScript language programs are saved with the ".js" extension
+    JavaScript does not require that amount of memory
+    JavaScript is stored on the Host machine (client Machine) as the "source" text.</p>
+  <div class="all">
+    <div class="table">
+      <h1>Click the button below to know todays date</h1>
+      <p style="text-align: centre;">Using loop</p>
+      <span id="winner"></span> <br>
+      <button onclick="seyi()">Click Me</button>
+      <br> <br>
+
+      <h1>Click the button below to get prime number form (1-70)</h1>
+      <p style="text-align: centre;">Using loop</p>
+      <span id="prime"></span> <br>
+      <button onclick="vibes()"> Click Me</button>
+    </div>
+
+    <div class="nigeria">
+      <h1>Investment Calculator</h1>
+      <input id="iron" placeholder="input your amount">
+      <select aria-label="Default select example" id="steel">
+        <option value="1">One Month</option>
+        <option value="2">Two Month</option>
+        <option value="3">Three Month</option>
+        <option value="4">Four Month</option>
+        <option value="5">Five Month</option>
+        <option value="6">Six Month</option>
+        <option value="7">Seven Month</option>
+        <option value="8">Eight Month</option>
+        <option value="9">Nine Month</option>
+        <option value="10">Ten Month</option>
+        <option value="11">Eleven Month</option>
+        <option value="12">Twelve Month</option>
+      </select> <br> <br>
+      <button onclick="claass()">Calculate</button>
+      <p style="font-size: 30px; color: rgb(255, 243, 5);"> The interest rate is 10% per month , so you to withdraw
+        <span id="payup" style="color: rgb(0, 153, 255);"></span> in the next <span id="mote"
+          style="color:rgb(0, 179, 255)"></span>
+      </p>
+    </div>
+  </div>
+
+
+  <div class="all">
+    <div class="table">
+      <h1>Loan Calculator</h1>
+      <label> <b>Funding Amount </b></label> <br>
+      <input id="lon" placeholder="input your amount" class="in"> <br> <br> <br>
+      <label><b>MarkUp %</b></label> <br>
+
+      <input class="in" value="10" id="lom" onkeyup="cha()" type="number"> <br> <br> <br>
+      <label><b>Funding Period</b></label> <br>
+
+      <select aria-label="Default select example" class="in" id="stee">
+        <option value="1">One Month</option>
+        <option value="2">Two Month</option>
+        <option value="3">Three Month</option>
+        <option value="4">Four Month</option>
+        <option value="5">Five Month</option>
+        <option value="6">Six Month</option>
+        <option value="7">Seven Month</option>
+        <option value="8">Eight Month</option>
+        <option value="9">Nine Month</option>
+        <option value="10">Ten Month</option>
+        <option value="11">Eleven Month</option>
+        <option value="12">Twelve Month</option>
+      </select> <br> <br>
+      <p><i style="color: rgb(255, 0, 0);;">Your markup has been assumed at <span id="mercy">10</span>%</i></p>
+      <button onclick="opeyemi()">Calculate</button>
+      <p style="font-size: 30px; color: rgb(255, 234, 5); text-shadow: 5px 5px 10px black;"> Your monthly repayment will
+        be <span id="fre" style="color: rgb(0, 157, 255); font-size: 20px;">0</span> with <span id="frt"
+          style="color: rgb(0, 157, 255); font-size: 20px;">0</span> scheduled number of payments The total repayment on
+        this funding will be <span id="fry" style="color: rgb(0, 157, 255); font-size: 20px;">0</span>
+      </p>
+    </div>
+
+
+
+    <div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="shadow" id="guess">
+            <h1 style="color: rgb(255, 5, 5); margin-left: 35%;" class="loop" ;>
+              GUESS MY NUMBER GAME</h1>
+            <div class="body">
+              <div class="top">
+                <h1 class="nah" style="margin-left: 40%;">
+                  Start Guessing......
+                </h1> <br>
+                <input class="mynumber" placeholder="Guess a number btw 1 and 20"
+                  style="width: 30%;  font-size: 24px; text-align: center;border: 5px solid blue; margin-left: 35%;"><br><br><br>
+
+                <h2 class="number" style="text-align: center;">
+                  The number is
+                  ??</h2><br>
+
+                <button class="check" style="margin-left: 40%;">Check</button>
+
+                <button class="again" style="margin-left: 10%;">PLAY
+                  AGAIN</button>
+
+                <h1 class="highestscore" style="text-align: center;">
+                  Highest Score: <span id="high">0</span></h1>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="all">
+          <div class="table">
+            <h1 id="" style="color: rgb(255, 5, 5); text-shadow: 5px 5px 10px rgb(0, 0, 0); text-align: center;">Digital
+              Time</h1>
+            <br>
+            <h1 onload="xma()" id="tund"
+              style="color: rgb(22, 255, 5); text-shadow: 5px 5px 10px black; text-align: center;">
+            </h1>
+          </div>
+
+
+          <div class="nigeria">
+            <h1 id="oro"
+              style="color: rgb(6, 232, 255); text-shadow: 5px 5px 10px rgb(0, 0, 0); text-align: center; padding: 12px; ">
+              COUNTDOWN TO NEWYEAR</h1>
+            <br>
+            <h1 onload="ma()" id="tunde" boarder="radius:234px;margin-left:20px;">
+            </h1>
+          </div>
+        </div>
+        <h1 class="true">UBER</h1>
+        <div class="container">
+          <div class="all">
+            <div class="then table">
+              <div style="text-align: center;">
+                <h1 class="counter">
+                  <span id="min">00</span>
+                  <span>:</span>
+                  <span id="sec">00</span>
+                </h1> <br>
+                <button id="start" style="background:green;">Start</button>
+                <button id="end" style="background:orange">End</button>
+              </div>
+              <table baorder="2" cellpadding="7" class="receipt">
+                <tr>
+                  <th colspan="2" style="color: green;">Receipt</th>
+                </tr>
+                <tr>
+                  <td>Item</td>
+                  <td>Price</td>
+                </tr>
+
+                <tr>
+                  <td>Base fare</td>
+                  <td style="color: green">#800</td>
+                </tr>
+                <tr>
+                  <td>Time Fare</td>
+                  <td class="bucks" style="color: green;"></td>
+                </tr>
+                <tr>
+                  <td>Gross Total</td>
+                  <td class="toti" style="color: green;"></td>
+                </tr>
+                <tr>
+                  <td>VAT(5%)</td>
+                  <td class="pect" style="color: red;"></td>
+                </tr>
+                <tr>
+                  <td>Payable</td>
+                  <td class="lot" style="color: green;"></td>
+                </tr>
+
+
+              </table>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="shadow age" id="age">
+                <h3>
+                  SUBJECT SELECTION</h3>
+                <div>
+                  <div style="display: flex; flex-direction: row; ">
+                    <div style="margin-left: 5%;">
+                      <table id="subjectt">
+                        <h3>Available Subjects</h3> <br>
+                        <thead>
+                          <tr>
+                            <th>Subject</th>
+                            <th>Select</th>
+                          </tr>
+                        </thead>
+                        <tbody id="bodyy"></tbody>
+                      </table>
+                    </div>
+                    <div style="margin-left: 10%;">
+                      <table id="celll" cellpadding="4">
+                        <h3>Selected Subjects</h3><br>
+                        <thead>
+                          <tr>
+                            <th>Selected</th>
+                            <th>Delect</th>
+                          </tr>
+                        </thead>
+                        <tbody id="idd"></tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div><br><br><br>
+        <div class="nigeria">
+          <h1>Simple Add and Delete
+            Machine</h1>
+          <div>
+            <input type="text" id="input">
+            <button onclick="taiwo()">
+              Add</button>
+            <ul id="myown">
+
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <script>
+
+        let array1 = [1, 2, 3, 4, 5, 6]
+        const [bola, , sade, ,] = array1
+        console.log(sade)
+        function addme() {
+          let coll = document.getElementById(`collect`).value;
+          let anno = document.getElementById(`goodsin`);
+          let kill = document.createElement(`td`);
+          let vibe = document.createElement(`tr`);
+          let nau = document.createTextNode(coll);
+          kill.appendChild(nau);
+          vibe.appendChild(kill);
+          anno.appendChild(vibe);
+
+
+
+
+          let d = new Date()
+          let ho = d.getHours();
+          let mi = d.getMinutes();
+          ho = (ho < 10) ? "0" + ho : ho;
+          min = (min < 10) ? "0" + min : min;
+
+          tim = ` ${ho} : ${mi}`;
+
+          let say = document.createTextNode(tim);
+          let vio = document.createElement(`td`);
+          vio.appendChild(say);
+          vibe.appendChild(vio);
+
+
+          let rita = document.createElement(`td`)
+          let shope = document.createElement(`span`);
+          let sock = document.createTextNode(`\u00d7`);
+          shope.appendChild(sock);
+          rita.appendChild(shope);
+          vibe.appendChild(rita)
+          rita.className = `there`;
+          shope.style.cursor = `pointer`
+          let wer = document.getElementsByClassName(`there`);
+          let y;
+          for (y = 0; y < wer.length; y++) {
+            wer[y].onclick = function () {
+              this.parentNode.style.display = `none`
+              // this.parentElement.style.display = `none`
+            }
+          }
+
+
+          let unfam = document.createElement(`td`);
+          let meina = document.createTextNode(`\u2714`);
+          unfam.appendChild(meina);
+          vibe.appendChild(unfam);
+          unfam.className = `intelli`;
+          unfam.style.cursor = `pointer`
+          let telHell = document.getElementsByClassName(`intelli`);
+          let q;
+          for (q = 0; q < telHell.length; q++) {
+            telHell[q].onclick = function () {
+              this.parentNode.style.textDecoration = `line-through`
+            }
+          }
+
+
+          let chag = document.createElement(`td`);
+          let hji = document.createTextNode(``);
+          chag.appendChild(hji);
+          vibe.appendChild(chag);
+          chag.className = `support`;
+          chag.style.cursor = `pointer`;
+          let dis = document.getElementsByClassName(`support`);
+          let t;
+          for (t = 0; t < dis.length; t++) {
+            dis[t].onclick = function () {
+              document.getElementById(`collect`).value = coll;
+              this.parentNode.style.display = `none`
+            }
+          }
+
+
+
+
+
+
+          document.getElementById('collect').value = " ";
+          document.getElementById('collect').focus();
+        }
+        let cols = document.getElementById(`subin`);
+        cols.addEventListener(`click`, addme);
+
+
+
+
+        let ago = document.querySelector(`#min`);
+        let cago = document.querySelector(`#sec`);
+        let startbtn = document.getElementById('start');
+        let endbtn = document.getElementById('end');
+        let fare = document.querySelector(`.bucks`);
+        let gross = document.querySelector(`.toti`);
+        let pay = document.querySelector(`.lot`);
+        let pa = document.querySelector(`.pect`);
+        let rec = document.querySelector(`.receipt`);
+        let sek = 0;
+        let k;
+
+        function work() {
+          ++sek;
+          let mes = Number(parseInt(sek / 60));
+          let sis = sek % 60;
+
+          mes = (mes < 10) ? "0" + mes : mes;
+          sis = (sis < 10) ? "0" + sis : sis;
+
+          ago.innerHTML = mes;
+          cago.innerHTML = sis;
+          let read = 50 * mes;
+          fare.innerHTML = read;
+          let ross = read + 800;
+          gross.innerHTML = ross;
+          let pec = 5 / 100 * ross;
+          pa.innerHTML = pec;
+          pay.innerHTML = pec + ross;
+        }
+        function Count() {
+          k = setInterval(work, 1000);
+        }
+
+        function startCount() {
+          Count();
+          sek = 0
+          cago.innerHTML = 0 + '0',
+            ago.innerHTML = 0 + '0',
+            startbtn.style.display = 'none';
+          endbtn.style.display = `block`;
+          rec.style.display = `none`
+
+        }
+        function endCount() {
+          clearInterval(k);
+          startbtn.style.display = `block`;
+          endbtn.style.display = `none`;
+          rec.style.display = `block`
+        }
+
+        startbtn.addEventListener('click', startCount);
+        endbtn.addEventListener('click', endCount);
+
+        function greet() {
+          let a = new Date().getHours();
+          if (a > 0 && a < 11) {
+            alert('Good Morning')
+          }
+          else if (a > 11 && a < 16) {
+            alert('Good afternoon')
+          }
+          else {
+            alert('Good Evening')
+          };
+        };
+        function seun() {
+          let resturant = {
+            name: 'chicken Republic',
+            categories: ['aficandish', 'chinesedish', 'calarbadish', 'indiadish', 'drink', 'soup', 'meat',],
+            drink: ['chivita', 'chiexotic', 'cocoa', 'fanta', '7up', 'evabottlewater',],
+            soup: ['egusi', 'ewedu', 'stew', 'ogbono', 'okoro',],
+            swallow: ['amala', 'semovita', 'akpu', 'fufu', 'eba',],
+            owner: 'mr okoro',
+            location: 'bodija',
+          };
+          alert(`i want ${resturant.categories[5]} ${resturant.soup[0]} and ${resturant.swallow[4]} i also want ${resturant.drink[3]}, thanks`);
+        };
+        function james() {
+          let age = prompt('what is Nigerian age ?');
+          let d = +age;
+          switch (d) {
+            case 50: alert('not close');
+              break;
+            case 59: alert('close');
+              break;
+            case 60: alert(' almost correct');
+              break;
+            case 63: alert('correct');
+              break;
+            case 64: alert('close');
+              break;
+            case 65: alert('close');
+              break;
+            default: alert('wrong');
+          };
+        };
+        let w, q;
+        function getAnswer() {
+          if (w == " " || q == "") {
+            ci.innerHTML = "insert a number"
+            ci.style.color = "red"
+          }
+          else if (isNaN(q) || isNaN(w)) {
+            ci.innerHTML = " insert a number"
+            ci.style.color = "red"
+          }
+        }
+        let ci = document.getElementById('answer');
+        let p = document.getElementById('symbol');
+
+        let rt = document.querySelectorAll('.but')
+
+        for (let i = 0; i < rt.length; i++) {
+
+          rt[i].addEventListener('click', function () {
+
+            getAnswer()
+            let w = Number(document.getElementById('input1').value);
+            let q = Number(document.getElementById('input2').value);
+            if (rt[i].value == 'add') {
+              let ko = w + q
+              p.innerHTML = "+";
+              ci.innerHTML = ` = ${ko}`
+              ci.style.color = 'green';
+
+            }
+            if (rt[i].value == 'sub') {
+              let ko = w - q
+              p.innerHTML = "-";
+              ci.innerHTML = ` = ${ko}`
+              ci.style.color = 'green';
+
+            }
+            if (rt[i].value == 'divi') {
+              let ko = w / q
+              p.innerHTML = "/";
+              ci.innerHTML = ` = ${ko}`
+              ci.style.color = 'green';
+
+            }
+            if (rt[i].value == 'multi') {
+              let ko = w * q
+              p.innerHTML = "X";
+              ci.innerHTML = ` = ${ko}`
+              ci.style.color = 'green';
+
+            }
+          })
+        };
+
+        function cla() {
+          let moneyInvested = Number(document.getElementById('iron').value);
+          let month = Number(document.getElementById('steel').value);
+          let loan = moneyInvested * 0.1;
+          asadcgfbhnjmh, document.getElementById('payup').innerHTML = (`${calow}`)
+          document.getElementById('mote').innerHTML = (`${month} month`)
+
+        };
+
+
+        function seyi() {
+          let ser = document.querySelector('#winner')
+          let oneday = new Date().getDay()
+          let days = ['Sunday', 'Monday', "Tuesday", 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+          if (oneday == 0) {
+            ser.innerHTML = (` <h2>Today is ${days[oneday]} go to church </h2>`)
+          }
+          else if (oneday == 5) {
+            ser.innerHTML = (` <h2>Today is ${days[oneday]} go to mosque </h2>`)
+          }
+          else if (oneday == 6) {
+            ser.innerHTML = (` <h2>Today is ${days[oneday]} go to party </h2>`)
+          }
+          else (
+            ser.innerHTML = (` <h2>Today is ${days[oneday]} go to work</h2>`)
+          )
+        }
+        function vibes() {
+          let n;
+          n = prompt('enter a number from 1 to 70');
+          if (!n || n < 1 || n > 70) {
+            alert(`enter a number from 1 to 70`)
+          }
+          else if (n == 2) {
+            alert(`the number is a prime number`)
+          }
+          else {
+            let i;
+            for (i = 2; i < n; i++) {
+              if (n % i == 0) {
+                alert(`you are wrong, ${n} is not a prime number`);
+                break;
+              }
+            }
+            if (n == i) {
+              alert(`this is a prime number`)
+            }
+          }
+        }
+        function opeyemi() {
+          let firstMoney = Number(document.querySelector(`#lon`).value);
+          let MarkUpPercentAge = Number(document.querySelector(`#lom`).value);
+          let MonthsYear = Number(document.querySelector(`#stee`).value);
+          let Percentage = MarkUpPercentAge / 100;
+          let TotalAmount = firstMoney * Percentage + firstMoney;
+          let jk = MonthsYear;
+          let Inter = TotalAmount / MonthsYear;
+          document.querySelector(`#fre`).innerHTML = `${Inter} naria`;
+          document.querySelector(`#frt`).innerHTML = `${jk}`;
+          document.querySelector(`#fry`).innerHTML = `${TotalAmount} naria`;
+        }
+
+        let highestscore = document.querySelector('#high').innerHTML;
+                const btn = document.querySelector('.check');
+                btnagain = document.querySelector('.again');
+                let myMessage = document.querySelector('.nah')
+                let theNumber = document.querySelector('.number');
+                let theBody = document.querySelector('.body');
+                secretNumber = Math.trunc(Math.random() * 20) + 1;
+                let score = 20;
+
+                function scoreline() {
+                    score = score - 4;
+                    if (score == 0) {
+                        myMessage.innerHTML = 'Game Over';
+                        btn.style.display = 'none';
+                        btnagain.style.display = 'inline-block';
+                        btn.style.backgroundColor = 'red'
+                        btn.style.color = 'white';
+                        document.querySelector('.mynumber').value = "";
+                        theBody.style.backgroundColor = 'red'
+                        theNumber.innerHTML = `The Number is ${secretNumber}`;
+                    }
+                }
+
+                let myEngine = function () {
+                    let myGuess = Number(document.querySelector('.mynumber').value);
+                    if (!myGuess || myGuess < 1 || myGuess > 20) {
+                        myMessage.innerHTML = 'your guess must be between 1 and 20 only';
+                        myMessage.style.color = "gold";
+
+                        document.querySelector('.mynumber').value = "";
+                        scoreline();
+                    } else if (myGuess > secretNumber) {
+                        myMessage.innerHTML = 'your guess is too high';
+                        myMessage.style.color = "red";
+                        document.querySelector('.mynumber').value = "";
+                        scoreline();
+                    } else if (myGuess < secretNumber) {
+                        myMessage.innerHTML = 'your guess is too low';
+                        myMessage.style.color = "blue";
+                        document.querySelector('.mynumber').value = "";
+                        scoreline();
+                    } else if (myGuess == secretNumber) {
+                        myMessage.innerHTML = `correct, the number is ${secretNumber}`;
+                        myMessage.style.color = "yellow";
+                        theBody.style.backgroundColor = "green";
+                        theBody.style.color = "white";
+                        theNumber.innerHTML = `SCORE: ${score}`;
+                        theNumber.style.color = 'yellow';
+                        document.querySelector('.mynumber').value = "";
+                        btn.style.display = 'none'
+                        btnagain.style.display = 'inline-block';
+                        document.querySelector('.mynumber').value = '';
+                        if (highestscore < score) {
+                            document.querySelector('#high').innerHTML = score;
+                        }
+                    }
+                }
+
+                console.log(secretNumber)
+                btn.addEventListener('click', myEngine);
+                btnagain.addEventListener('click', function () {
+                    myMessage.innerHTML = 'Start guessing......';
+                    myMessage.style.color = 'black';
+                    btn.style.display = "inline-block"
+                    btnagain.style.display = "none"
+                    btn.style.backgroundColor = "white"
+                    btn.style.color = "black"
+                    document.querySelector('.mynumber').value = '';
+                    theBody.style.backgroundColor = 'white';
+                    theNumber.innerHTML = `The number is ??`;
+                    score = 20;
+                    secretNumber = Math.trunc(Math.random() * 20) + 1;
+                    theNumber.style.color = 'black';
+                })
+
+
+        function xma() {
+          let d = new Date()
+          let Months = [`january`, `feburary`, `march`, `april`, `may`, `june`, `july`, `August`, `septmber`, `october`, `november`, `december`];
+          let ho = d.getHours();
+          let mi = d.getMinutes();
+          let sec = d.getSeconds();
+          let da = d.getDate();
+          if (ho < 10) {
+            ho = `0` + ho;
+          }
+          if (da < 10) {
+            da = `0` + da;
+          }
+          if (mi < 10) {
+            mi = `0` + mi;
+          }
+          if (sec < 10) {
+            sec = `0` + sec;
+          }
+          let ab = document.querySelector(`#tund`).innerHTML = `${Months[d.getMonth()]} 
+      ${da}, ${ho} : ${mi} : ${sec}`;
+        }
+
+        xma()
+        setInterval(xma, 1000)
+
+
+        let countdown = new Date(`december 25 2023 00:00:00`).getTime();
+        function ma() {
+          let now = new Date().getTime();
+          let distance = countdown - now;
+          let days = Math.floor(distance / (24 * 60 * 60 * 1000));
+          let hours = Math.floor(distance % (24 * 60 * 60 * 1000) / (60 * 60 * 1000));
+          let minutes = Math.floor(distance % (60 * 60 * 1000) / (60 * 1000));
+          let seconds = Math.floor(distance % (60 * 1000) / (1000));
+          if (days == 0) {
+            clearInterval(remi);
+            document.querySelector(`#oro`).innerHTML = `HAPPY NEW YEAR`;
+            document.querySelector(`body`).style.backgroundColor = `green`
+          }
+          document.querySelector(`#tunde`).innerHTML = `${days}Days : ${hours}Hrs : ${minutes}Min : ${seconds}Sec`
+        }
+        xma()
+        let remi = setInterval(ma, 1000)
+        function taiwo() {
+          let piri = document.getElementById('input').value;
+          let subje = document.getElementById(`myown`);
+          let para = document.createElement(`li`);
+          let abu = document.createTextNode(piri);
+          para.appendChild(abu);
+          subje.appendChild(para);
+
+          let shope = document.createElement(`span`);
+          let sock = document.createTextNode(`\u2714`);
+          shope.appendChild(sock);
+          para.appendChild(shope)
+          shope.title = 'mark done';
+          shope.style.backgroundColor = `green`;
+          shope.style.color = `white`;
+          shope.style.cursor = `pointer`;
+          shope.className = `pami`
+          let doy = document.getElementsByClassName(`pami`);
+          let i;
+          for (i = 0; i < doy.length; i++) {
+            doy[i].onclick = function () {
+              this.parentNode.style.textDecoration = `line-through`
+            }
+
+          }
+
+          let ghk = document.createElement(`span`);
+          let ftu = document.createTextNode(`\u00d7`);
+          ghk.appendChild(ftu);
+          para.appendChild(ghk);
+          ghk.style.color = `white`;
+          ghk.style.background = `red`;
+          ghk.style.cursor = `pointer`;
+          ghk.className = `rewq`;
+          let drt = document.getElementsByClassName('rewq');
+          let y;
+          for (y = 0; y < drt.length; y++) {
+            drt[y].onclick = function () {
+              this.parentNode.style.display = `none`
+            }
+          }
+          document.getElementById('input').value = " ";
+          document.getElementById('input').focus()
+        }
+        let availableSubject = [`English`, `Mathematics`, `Chemistry`, `Physics`, `Biology`,
+          `Civics`, `Economics`, `Yoruba`, `Marketing`, `Geography`,
+        ];
+
+        function addSubjectToSelecte(subject) {
+          let index = availableSubject.indexOf(subject);
+          if (index > -1) {
+            availableSubject.splice(index, 1);
+            updateAvailableSubjectTabl();
+            updateSelectedSubjectsTabl(subject);
+          }
+        }
+
+        function removeSubjectFromSelecte(subject) {
+          let selectedSubjectTableBody = document.getElementById("idd");
+          let row = document.getElementById(subject);
+          selectedSubjectTableBody.removeChild(row);
+          availableSubject.push(subject);
+          updateAvailableSubjectTabl();
+        }
+
+        function updateAvailableSubjectTabl() {
+          let availableSubjectBody = document.getElementById("bodyy");
+          availableSubjectBody.innerHTML = "";
+
+          for (let i = 0; i < availableSubject.length; i++) {
+            let subject = availableSubject[i];
+            let doc = document.createElement("tr");
+
+            let qeenah = document.createElement("td");
+            qeenah.appendChild(document.createTextNode(subject));
+
+            let jay = document.createElement("td");
+            let addButton = document.createElement("input");
+            addButton.type = 'checkbox';
+            addButton.onclick = function () {
+              addSubjectToSelecte(subject);
+            };
+            jay.appendChild(addButton);
+
+            doc.appendChild(qeenah);
+            doc.appendChild(jay);
+            availableSubjectBody.appendChild(doc);
+          }
+        }
+
+        function updateSelectedSubjectsTabl(subject) {
+          let selectedSubjectsTableBody = document.getElementById("idd");
+          let doc = document.createElement("tr");
+          doc.id = subject;
+
+          let jun = document.createElement("td");
+          jun.appendChild(document.createTextNode(subject));
+
+          let kirah = document.createElement("td");
+          let delette = document.createElement("span");
+          let sist = document.createTextNode("\u00d7");
+          delette.appendChild(sist);
+          delette.style.cursor = `pointer`;
+          delette.style.fontSize = ` 25px`;
+          delette.style.background = `red`
+          delette.onclick = function () {
+            removeSubjectFromSelecte(subject);
+          };
+          kirah.appendChild(delette);
+
+          doc.appendChild(jun);
+          doc.appendChild(kirah);
+          selectedSubjectsTableBody.appendChild(doc);
+        }
+        updateAvailableSubjectTabl();
+
+
+
+
+      </script>
+
+
+</body>
+
+</html>
